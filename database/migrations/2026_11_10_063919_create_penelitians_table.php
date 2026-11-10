@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('penulis_id')->constrained();
             $table->foreignId('kategori_id');
+            $table->string('isi');
             $table->timestamps();
         });
     }
