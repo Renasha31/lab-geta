@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('penelitians', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('penulis_id')->constrained();
+            $table->foreignId('kategori_id');
             $table->timestamps();
         });
     }
